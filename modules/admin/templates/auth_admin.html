@@ -1,0 +1,17 @@
+<h1 class="h1 page-header text-center">Авторизация в панели администратора</h1>
+<div class="col-sm-2">
+    <a href="/" class="btn btn-default">Страница обратной связи</a>
+</div>
+<div class="container col-sm-2 col-sm-offset-3">
+    <form action="/admin/auth/confirm" method="post">
+        <div class="form-group">
+            <label for="login">Логин:</label>
+            <input type="text" class="form-control" id="login" required name="login">
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" class="form-control" id="password" required name="password">
+        </div>
+        <button type="submit" name="admin-auth" class="btn btn-primary center-block">Войти</button>
+    </form>
+</div>

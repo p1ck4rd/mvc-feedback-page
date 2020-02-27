@@ -1,0 +1,43 @@
+<h1 class="h1 page-header text-center">Панель администратора</h1>
+<div class="col-sm-2">
+    <a href="/" class="btn btn-default">Страница обратной связи</a>
+    <a href="/admin/signoff" class="btn btn-default">Выйти</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <label for="sort" class="control-label input-group">Сортировка сообщений</label>
+                    <div name="sort">
+                        <form id="sort-form">
+                            <div class="btn-group form-group" data-toggle="buttons">
+                                <label class="btn btn-default" name="field">
+                                    <input name="field" value="author_name" type="radio">Автор
+                                </label>
+                                <label class="btn btn-default">
+                                    <input name="field" value="author_email" type="radio">Email
+                                </label>
+                                <label class="btn btn-default active">
+                                    <input name="field" value="date" type="radio" checked>Дата
+                                </label>
+                            </div>
+                            <div class="btn-group form-group" data-toggle="buttons">
+                                <label class="btn btn-default">
+                                    <input name="direction" value="ascending" type="radio">По возрастанию
+                                </label>
+                                <label class="btn btn-default active">
+                                        <input name="direction" value="descending" type="radio" checked>По убыванию
+                                </label>
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-default" id="sort-btn">Сортировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messages">
+    <?php echo $messages; ?>
+</div>
